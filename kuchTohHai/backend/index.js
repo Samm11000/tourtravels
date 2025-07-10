@@ -13,9 +13,14 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174"],
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://tourtravels-f58p8cikk-swyamyadav1407-gmailcoms-projects.vercel.app" 
+  ],
   credentials: true,
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 
