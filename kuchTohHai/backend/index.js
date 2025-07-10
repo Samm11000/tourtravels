@@ -16,11 +16,12 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://tourtravels-f58p8cikk-swyamyadav1407-gmailcoms-projects.vercel.app", //admin
-    "https://your-frontend.vercel.app" //frontend
+    "https://tourtravels-silk.vercel.app", //  admin
+    "https://tourtravels-3xq6.vercel.app"  // frontend
   ],
   credentials: true,
 }));
+
 
 
 app.use(express.json());
