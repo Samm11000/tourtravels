@@ -11,7 +11,8 @@ import PublicRoute from "./components/PublicRoute";
 import EditCar from "./components/EditCar";
 import Enquiries from "./components/Enquiries";
 import EnquiryDetail from "./components/EnquiryDetail";
-
+import Drivers from './components/Drivers';
+import VehicleList from './components/VehicleList';
 function App() {
   return (
     <Provider store={store}>
@@ -26,6 +27,11 @@ function App() {
               </PublicRoute>
             }
           />
+          <Route path="/drivers" element={<Drivers />} />
+          <Route 
+          path="/vehicles/:carId" 
+          element={<VehicleList />} 
+        />
           <Route
             path="/dashboard"
             element={
