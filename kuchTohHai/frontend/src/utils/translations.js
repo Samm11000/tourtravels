@@ -1,3 +1,5 @@
+
+
 export const translations = {
   en: {
     // Navbar
@@ -8,6 +10,8 @@ export const translations = {
     about: "About",
     contact: "Contact",
     callNow: "Call Now",
+    photoGallery: "Gallery",
+    certifications: "Certifications",
 
     // Hero Section
     heroTitle: "Your Journey",
@@ -121,6 +125,17 @@ export const translations = {
     tellUsAboutRequirements: "Tell us about your travel requirements...",
     sendMessageBtn: "Send Message",
 
+    // Photo Gallery Section
+    all: "All",
+    vehicles: "Vehicles",
+    tours: "Tours",
+    service: "Service",
+    galleryDescription: "Explore our collection of vehicles, tour destinations, and memorable moments with our satisfied customers.",
+
+    // Certification Section
+    ourCertifications: "Our Certifications",
+    certificationsDescription: "Trusted and certified by government authorities and international standards, ensuring quality and reliability in our services.",
+
     // Footer
     trustedPartner: "Your trusted partner for safe, comfortable, and memorable travel experiences across India. Creating unforgettable journeys since 2015.",
     popularDestinations: "Popular Destinations",
@@ -185,6 +200,8 @@ export const translations = {
     about: "हमारे बारे में",
     contact: "संपर्क",
     callNow: "अभी कॉल करें",
+    photoGallery: "गैलरी",
+    certifications: "प्रमाणपत्र",
 
     // Hero Section
     heroTitle: "आपकी यात्रा",
@@ -298,6 +315,17 @@ export const translations = {
     tellUsAboutRequirements: "हमें अपनी यात्रा आवश्यकताओं के बारे में बताएं...",
     sendMessageBtn: "संदेश भेजें",
 
+    // Photo Gallery Section
+    all: "सभी",
+    vehicles: "वाहन",
+    tours: "टूर",
+    service: "सेवा",
+    galleryDescription: "हमारे वाहनों, टूर गंतव्यों और संतुष्ट ग्राहकों के साथ यादगार पलों का संग्रह देखें।",
+
+    // Certification Section
+    ourCertifications: "हमारे प्रमाणपत्र",
+    certificationsDescription: "सरकारी अधिकारियों और अंतर्राष्ट्रीय मानकों द्वारा विश्वसनीय और प्रमाणित, हमारी सेवाओं में गुणवत्ता और विश्वसनीयता सुनिश्चित करते हैं।",
+
     // Footer
     trustedPartner: "भारत भर में सुरक्षित, आरामदायक और यादगार यात्रा अनुभवों के लिए आपका विश्वसनीय साझीदार। 2015 से अविस्मरणीय यात्राएं बना रहे हैं।",
     popularDestinations: "लोकप्रिय गंतव्य",
@@ -318,7 +346,7 @@ export const translations = {
 
     // Common
     backToHome: "होम पर वापस",
-    back: "फ्लीट पर वापस",
+    backToFleet: "फ्लीट पर वापस",
     backToPackages: "पैकेज पर वापस",
     loading: "लोड हो रहा है...",
     noVehiclesFound: "कोई वाहन नहीं मिला",
