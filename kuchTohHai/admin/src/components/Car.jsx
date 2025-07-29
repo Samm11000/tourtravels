@@ -13,7 +13,7 @@ const Car = ({ car, onDelete }) => {
   const fetchVehicleCount = async () => {
     try {
       // const response = await fetch(`http://localhost:8000/api/vehicles/car/${car._id}`);
-      const response = await fetch(`${CAR_API}/api/vehicles/car/${car._id}`)
+      const response = await fetch(`${CAR_API}/${car._id}`)
 
       if (response.ok) {
         const data = await response.json();
@@ -34,7 +34,7 @@ const Car = ({ car, onDelete }) => {
 
     if (window.confirm('Are you sure you want to delete this car model? This will also delete all associated vehicles.')) {
       try {
-        const response = await fetch(`http://localhost:8000/api/cars/${car._id}`, {
+        const response = await fetch(`${CAR_API}/${car._id}`, {
 
           method: 'DELETE',
           credentials: 'include',
