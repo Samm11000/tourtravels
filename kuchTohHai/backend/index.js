@@ -18,6 +18,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
+    "http://localhost:5174",
     "http://localhost:5175",
     "https://tourtravels-silk.vercel.app", // admin
     "https://tourtravels-3xq6.vercel.app",
@@ -32,6 +33,7 @@ app.use(cookieParser());
 // Routes
 app.use("/api/cars", carRoutes);
 app.use("/api/admin", authRoutes);
+// app.use("/api/enquiries", enquiryRoutes);
 app.use("/api/enquiry", enquiryRoutes);
 app.use("/api/drivers", driverRoutes);
 app.use("/api/vehicles", vehicleRoutes); // New vehicle routes

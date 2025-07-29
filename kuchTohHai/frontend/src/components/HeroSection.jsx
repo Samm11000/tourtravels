@@ -18,7 +18,7 @@ const HeroSection = () => {
   // Typing animation state
   const [displayText, setDisplayText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
-  const fullText = "WE BELIEVE IN SERVICE";
+  const fullText = "MAYA TOUR AND TRAVELS";
   
   useEffect(() => {
     let index = 0;
