@@ -1506,7 +1506,7 @@ import {
   Gauge,
   RefreshCw
 } from 'lucide-react';
-
+import { VEHICLE_API } from './utils/constants';
 const VehicleList = () => {
   // Extract carId from URL
   const getCarIdFromUrl = () => {
@@ -1560,7 +1560,9 @@ const VehicleList = () => {
       setError(null);
       
       console.log('Fetching data for car ID:', carId);
-      const response = await fetch(`http://localhost:8000/api/vehicles/car/${carId}`);
+      // const response = await fetch(`http://localhost:8000/api/vehicles/car/${carId}`);
+      const response = await fetch(`${VEHICLE_API}/car/${carId}`);
+
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -1610,8 +1612,9 @@ const VehicleList = () => {
 
     try {
       const url = editingVehicle 
-        ? `http://localhost:8000/api/vehicles/${editingVehicle._id}` 
-        : 'http://localhost:8000/api/vehicles';
+        ? `${VEHICLE_API}/${editingVehicle._id}` 
+        : `${VEHICLE_API}`;
+        
       const method = editingVehicle ? 'PUT' : 'POST';
       
       const response = await fetch(url, {
@@ -1674,7 +1677,7 @@ const VehicleList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this vehicle?')) {
       try {
-        const response = await fetch(`http://localhost:8000/api/vehicles/${id}`, {
+        const response = await fetch(`${VEHICLE_API}/${id}`, {
           method: 'DELETE'
         });
         
@@ -1689,7 +1692,7 @@ const VehicleList = () => {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/vehicles/${id}/status`, {
+      const response = await fetch(`${VEHICLE_API}/${id}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

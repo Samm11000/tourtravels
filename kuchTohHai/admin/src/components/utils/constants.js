@@ -6,3 +6,6 @@ export const AUTH_API = `${BASE_URL}/admin`;
 export const CAR_API = `${BASE_URL}/cars`;
 export const ENQUIRY_API = `${BASE_URL}/enquiry`;
 export const DRIVER_API = `${BASE_URL}/drivers`;
+
+
+export const VEHICLE_API =`${BASE_URL}/vehicles`;
