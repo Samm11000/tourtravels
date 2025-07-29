@@ -28,8 +28,8 @@ import {
   CheckCircle,
   XCircle
 } from 'lucide-react';
+import { DRIVER_API } from './utils/constants';
 
-const DRIVER_API = 'http://localhost:8000/api/drivers';
 
 const Drivers = () => {
   const [drivers, setDrivers] = useState([]);

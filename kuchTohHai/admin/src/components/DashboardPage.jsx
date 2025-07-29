@@ -6,8 +6,8 @@ import axios from "axios";
 import { useDispatch, useSelector } from 'react-redux';
 import { setLoading, setAuthUser } from './redux/authSlice';
 import useGetAllCars from "./hooks/useGetAllCars";
-
-const DRIVER_API = 'http://localhost:8000/api/drivers';
+import { DRIVER_API } from "./utils/constants";
+// const DRIVER_API = 'http://localhost:8000/api/drivers';
 
 const DashboardPage = () => {
   const navigate = useNavigate();
