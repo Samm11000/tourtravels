@@ -728,9 +728,9 @@ import {
 } from 'lucide-react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import { ENQUIRY_API } from './utils/constants';
 // Fix the API endpoint - should be 'enquiries' not 'enquiry'
-const ENQUIRY_API = 'http://localhost:8000/api/enquiry';
+// const ENQUIRY_API = 'http://localhost:8000/api/enquiry';
 
 const Enquiries = () => {
   const [enquiries, setEnquiries] = useState([]);
