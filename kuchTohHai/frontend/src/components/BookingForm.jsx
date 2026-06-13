@@ -45,14 +45,14 @@
 //     navigator.geolocation.getCurrentPosition(
 //       async (position) => {
 //         const { latitude, longitude } = position.coords;
-        
+
 //         try {
 //           // Reverse geocoding to get address
 //           const response = await fetch(
 //             `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=YOUR_OPENCAGE_API_KEY`
 //           );
 //           const data = await response.json();
-          
+
 //           let address = "Location detected";
 //           if (data.results && data.results[0]) {
 //             address = data.results[0].formatted || "Location detected";
@@ -101,7 +101,7 @@
 //             errorMessage = "Location request timed out.";
 //             break;
 //         }
-        
+
 //         setLocation(prev => ({
 //           ...prev,
 //           loading: false,
@@ -182,9 +182,9 @@
 //       const locationText = location.latitude 
 //         ? `%0ALocation: ${location.address || `${location.latitude}, ${location.longitude}`}`
 //         : '';
-      
+
 //       const message = `Hello Maya Tours and Travels,%0Athis side ${formData.name} and I want to enquire about ${formData.serviceType}%0Afrom ${formData.from} to ${formData.to}%0Aon ${formData.date} ${formData.time}${locationText}`;
-//       const whatsappLink = `https://wa.me/9368084778?text=${message}`;
+//       const whatsappLink = `https://wa.me/9897138727?text=${message}`;
 //       window.location.href = whatsappLink;
 //     } catch (err) {
 //       console.error("Submission failed:", err?.response?.data?.message || err.message);
@@ -227,14 +227,14 @@
 //             </button>
 //           )}
 //         </div>
-        
+
 //         {location.error && (
 //           <div className="flex items-center mt-2 text-xs text-red-600">
 //             <AlertCircle className="w-3 h-3 mr-1" />
 //             {location.error}
 //           </div>
 //         )}
-        
+
 //         {location.address && (
 //           <div className="mt-2 text-xs text-gray-600 truncate">
 //             📍 {location.address}
@@ -391,10 +391,10 @@
 //           <p className="text-sm text-gray-600 font-medium">
 //             {t("needHelp")}{" "}
 //             <a
-//               href="tel:+919368084778"
+//               href="tel:+919897138727"
 //               className="text-amber-600 font-bold hover:underline hover:text-orange-600 transition-colors"
 //             >
-//               +91 9368084778
+//               +91 9897138727
 //             </a>
 //           </p>
 //         </div>
@@ -412,7 +412,7 @@
 //             transform: translateY(0);
 //           }
 //         }
-        
+
 //         .animate-fadeInUp {
 //           animation: fadeInUp 0.8s ease-out forwards;
 //           opacity: 0;
@@ -428,7 +428,7 @@
 //             transform: translateX(0);
 //           }
 //         }
-        
+
 //         .animate-slideInRight {
 //           animation: slideInRight 1s ease-out;
 //         }
@@ -493,17 +493,17 @@ const BookingForm = () => {
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;
-        
+
         try {
           let address = `Lat: ${latitude.toFixed(4)}, Lng: ${longitude.toFixed(4)}`;
-          
+
           // Try to get readable address (optional)
           try {
             const response = await fetch(
               `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=YOUR_OPENCAGE_API_KEY`
             );
             const data = await response.json();
-            
+
             if (data.results && data.results[0]) {
               address = data.results[0].formatted || address;
             }
@@ -547,7 +547,7 @@ const BookingForm = () => {
             errorMessage = "Location request timed out.";
             break;
         }
-        
+
         setLocation(prev => ({
           ...prev,
           loading: false,
@@ -582,7 +582,7 @@ const BookingForm = () => {
       }, 5000);
 
       const controller = new AbortController();
-      
+
       fetch('https://n8ninstance.sambhavggn8n.cfd/webhook/ENQUIRY', {
         method: 'POST',
         headers: {
@@ -592,19 +592,19 @@ const BookingForm = () => {
         body: JSON.stringify(webhookData),
         signal: controller.signal
       })
-      .then(response => {
-        clearTimeout(timeout);
-        if (response.ok) {
-          resolve(response);
-        } else {
-          reject(new Error(`N8N webhook failed with status: ${response.status}`));
-        }
-      })
-      .catch(error => {
-        clearTimeout(timeout);
-        controller.abort();
-        reject(error);
-      });
+        .then(response => {
+          clearTimeout(timeout);
+          if (response.ok) {
+            resolve(response);
+          } else {
+            reject(new Error(`N8N webhook failed with status: ${response.status}`));
+          }
+        })
+        .catch(error => {
+          clearTimeout(timeout);
+          controller.abort();
+          reject(error);
+        });
 
       // Backup timeout to abort the request
       setTimeout(() => {
@@ -615,7 +615,7 @@ const BookingForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Validate required fields
     if (!formData.name || !formData.phone || !formData.from || !formData.to || !formData.date || !formData.time || !formData.serviceType) {
       alert("Please fill in all required fields");
@@ -673,68 +673,68 @@ const BookingForm = () => {
 
       await axios.post(ENQUIRY_API, enquiryData);
       backendSuccess = true;
-      
+
       setSubmitStatus(prev => ({
         ...prev,
         backend: 'success',
         message: "Enquiry saved! Attempting to send notification..."
       }));
-      
+
       console.log("✅ Backend save successful");
 
     } catch (backendError) {
       console.error("❌ Backend save failed:", backendError);
-      
+
       setSubmitStatus(prev => ({
         ...prev,
-        backend: 'failed',
+        backend: 'success',
         message: "Failed to save enquiry. Please try again."
       }));
-      
+
       setIsSubmitting(false);
-      alert(`Failed to submit enquiry: ${backendError.response?.data?.message || backendError.message}\n\nPlease try again or call us directly at +91 9368084778`);
+      alert(`Failed to submit enquiry: ${backendError.response?.data?.message || backendError.message}\n\nPlease try again or call us directly at +91 9897138727`);
       return;
     }
 
     // Step 2: Try N8N webhook (NON-CRITICAL)
-    try {
-      console.log("🔔 Attempting N8N webhook...");
-      setSubmitStatus(prev => ({
-        ...prev,
-        message: "Enquiry saved! Sending notification..."
-      }));
+    // try {
+    //   console.log("🔔 Attempting N8N webhook...");
+    //   setSubmitStatus(prev => ({
+    //     ...prev,
+    //     message: "Enquiry saved! Sending notification..."
+    //   }));
 
-      await tryN8nWebhook(webhookData);
-      webhookSuccess = true;
-      
-      setSubmitStatus(prev => ({
-        ...prev,
-        webhook: 'success',
-        message: "Enquiry submitted successfully! Redirecting to WhatsApp..."
-      }));
-      
-      console.log("✅ N8N webhook successful");
+    //   await tryN8nWebhook(webhookData);
+    //   webhookSuccess = true;
 
-    } catch (webhookError) {
-      console.warn("⚠️ N8N webhook failed (continuing anyway):", webhookError.message);
-      
-      setSubmitStatus(prev => ({
-        ...prev,
-        webhook: 'failed',
-        message: "Enquiry saved! Notification system temporarily unavailable, but your enquiry is recorded."
-      }));
+    //   setSubmitStatus(prev => ({
+    //     ...prev,
+    //     webhook: 'success',
+    //     message: "Enquiry submitted successfully! Redirecting to WhatsApp..."
+    //   }));
 
-      webhookSuccess = false;
-    }
+    //   console.log("✅ N8N webhook successful");
+
+    // } catch (webhookError) {
+    //   console.warn("⚠️ N8N webhook failed (continuing anyway):", webhookError.message);
+
+    //   setSubmitStatus(prev => ({
+    //     ...prev,
+    //     webhook: 'failed',
+    //     message: "Enquiry saved! Notification system temporarily unavailable, but your enquiry is recorded."
+    //   }));
+
+    //   webhookSuccess = false;
+    // }
 
     // Step 3: Always redirect to WhatsApp
     try {
       console.log("📱 Preparing WhatsApp redirect...");
-      
+
       setSubmitStatus(prev => ({
         ...prev,
-        message: webhookSuccess 
-          ? "✅ All systems working! Redirecting to WhatsApp..." 
+        message: webhookSuccess
+          ? "✅ All systems working! Redirecting to WhatsApp..."
           : "✅ Enquiry saved! Redirecting to WhatsApp..."
       }));
 
@@ -742,26 +742,26 @@ const BookingForm = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       // Create WhatsApp message
-      const locationText = location.latitude 
+      const locationText = location.latitude
         ? `%0ALocation: ${encodeURIComponent(location.address || `${location.latitude}, ${location.longitude}`)}`
         : '';
-      
-      const systemStatusText = webhookSuccess 
-        ? "" 
+
+      const systemStatusText = webhookSuccess
+        ? ""
         : "%0A%0A📝 Note: I'm contacting you directly as our auto-notification system is temporarily down.";
-      
+
       const message = `Hello Maya Tours and Travels,%0A%0AThis is ${encodeURIComponent(formData.name)} and I want to enquire about ${encodeURIComponent(formData.serviceType)}%0A%0ATrip Details:%0AFrom: ${encodeURIComponent(formData.from)}%0ATo: ${encodeURIComponent(formData.to)}%0ADate: ${formData.date}%0ATime: ${formData.time}%0APhone: ${formData.phone}${locationText}${systemStatusText}`;
-      
-      const whatsappLink = `https://wa.me/9368084778?text=${message}`;
-      
+
+      const whatsappLink = `https://wa.me/9897138727?text=${message}`;
+
       console.log("📱 Redirecting to WhatsApp...");
       window.open(whatsappLink, '_blank');
 
     } catch (redirectError) {
       console.error("❌ WhatsApp redirect failed:", redirectError);
-      
-      const contactInfo = `Your enquiry has been saved successfully!\n\nPlease contact us directly:\nPhone: +91 9368084778\n\nYour Details:\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${formData.serviceType}\nFrom: ${formData.from}\nTo: ${formData.to}\nDate: ${formData.date}\nTime: ${formData.time}`;
-      
+
+      const contactInfo = `Your enquiry has been saved successfully!\n\nPlease contact us directly:\nPhone: +91 9897138727\n\nYour Details:\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${formData.serviceType}\nFrom: ${formData.from}\nTo: ${formData.to}\nDate: ${formData.date}\nTime: ${formData.time}`;
+
       alert(contactInfo);
     }
 
@@ -789,22 +789,20 @@ const BookingForm = () => {
               {submitStatus.message}
             </span>
           </div>
-          
+
           <div className="mt-2 space-y-1">
             <div className="flex items-center text-xs">
-              <span className={`w-2 h-2 rounded-full mr-2 ${
-                submitStatus.backend === 'success' ? 'bg-green-500' :
+              <span className={`w-2 h-2 rounded-full mr-2 ${submitStatus.backend === 'success' ? 'bg-green-500' :
                 submitStatus.backend === 'failed' ? 'bg-red-500' :
-                'bg-yellow-500 animate-pulse'
-              }`}></span>
+                  'bg-yellow-500 animate-pulse'
+                }`}></span>
               <span>Database: {submitStatus.backend || 'pending'}</span>
             </div>
             <div className="flex items-center text-xs">
-              <span className={`w-2 h-2 rounded-full mr-2 ${
-                submitStatus.webhook === 'success' ? 'bg-green-500' :
+              <span className={`w-2 h-2 rounded-full mr-2 ${submitStatus.webhook === 'success' ? 'bg-green-500' :
                 submitStatus.webhook === 'failed' ? 'bg-orange-500' :
-                'bg-yellow-500 animate-pulse'
-              }`}></span>
+                  'bg-yellow-500 animate-pulse'
+                }`}></span>
               <span>Notification: {submitStatus.webhook || 'pending'}</span>
             </div>
           </div>
@@ -817,9 +815,9 @@ const BookingForm = () => {
           <div className="flex items-center">
             <Navigation className={`w-4 h-4 mr-2 ${location.loading ? 'animate-spin text-blue-500' : location.latitude ? 'text-green-500' : 'text-gray-400'}`} />
             <span className="text-sm font-medium text-gray-700">
-              {location.loading ? 'Detecting location...' : 
-               location.latitude ? 'Location detected' : 
-               'Location not detected'}
+              {location.loading ? 'Detecting location...' :
+                location.latitude ? 'Location detected' :
+                  'Location not detected'}
             </span>
           </div>
           {!location.latitude && !location.loading && (
@@ -832,14 +830,14 @@ const BookingForm = () => {
             </button>
           )}
         </div>
-        
+
         {location.error && (
           <div className="flex items-center mt-2 text-xs text-red-600">
             <AlertCircle className="w-3 h-3 mr-1" />
             {location.error}
           </div>
         )}
-        
+
         {location.address && (
           <div className="mt-2 text-xs text-gray-600 truncate">
             📍 {location.address}
@@ -1008,10 +1006,10 @@ const BookingForm = () => {
           <p className="text-sm text-gray-600 font-medium">
             {t("needHelp")}{" "}
             <a
-              href="tel:+919368084778"
+              href="tel:+919897138727"
               className="text-amber-600 font-bold hover:underline hover:text-orange-600 transition-colors"
             >
-              +91 9368084778
+              +91 9897138727
             </a>
           </p>
           <p className="text-xs text-gray-500 mt-1">

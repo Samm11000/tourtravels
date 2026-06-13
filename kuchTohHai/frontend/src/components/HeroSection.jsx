@@ -14,12 +14,12 @@
 
 // const HeroSection = () => {
 //   const { t } = useLanguage();
-  
+
 //   // Typing animation state
 //   const [displayText, setDisplayText] = useState("");
 //   const [isTyping, setIsTyping] = useState(true);
 //   const fullText = "MAYA TOUR AND TRAVELS";
-  
+
 //   useEffect(() => {
 //     let index = 0;
 //     const timer = setInterval(() => {
@@ -141,7 +141,7 @@
 //             {/* CTA Buttons */}
 //             <div className="flex flex-col sm:flex-row gap-4">
 //               <a
-//                 href="tel:+919368084778"
+//                 href="tel:+919897138727"
 //                 className="bg-gradient-to-r from-yellow-300 to-amber-400 text-amber-800 px-8 py-4 rounded-xl hover:from-yellow-400 hover:to-amber-500 transition-all transform hover:scale-105 font-semibold flex items-center justify-center shadow-lg group"
 //               >
 //                 <Phone className="w-5 h-5 mr-2" />
@@ -149,7 +149,7 @@
 //                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
 //               </a>
 //               <a
-//                 href="https://wa.me/919368084778?text=Hello%2C%20Maya%20Tours%20and%20Travels"
+//                 href="https://wa.me/919897138727?text=Hello%2C%20Maya%20Tours%20and%20Travels"
 //                 className="bg-emerald-500 text-white px-8 py-4 rounded-xl hover:bg-emerald-600 transition-all transform hover:scale-105 font-semibold flex items-center justify-center shadow-lg group"
 //                 target="_blank"
 //                 rel="noopener noreferrer"
@@ -207,11 +207,11 @@
 //             transform: translateX(-4000px);
 //           }
 //         }
-        
+
 //         .animate-carousel {
 //           animation: carousel 40s linear infinite;
 //         }
-        
+
 //         .animate-carousel:hover {
 //           animation-play-state: paused;
 //         }
@@ -226,7 +226,7 @@
 //             transform: translateY(0);
 //           }
 //         }
-        
+
 //         .animate-fadeInUp {
 //           animation: fadeInUp 1s ease-out forwards;
 //         }
@@ -257,11 +257,11 @@ import logo from "./photos/logo.png";
 
 const HeroSection = () => {
   const { t } = useLanguage();
-  
+
   // Logo animation state
   const [logoLoaded, setLogoLoaded] = useState(false);
   const [showContent, setShowContent] = useState(false);
-  
+
   useEffect(() => {
     // Simulate logo loading and trigger animations
     const logoTimer = setTimeout(() => {
@@ -376,15 +376,15 @@ const HeroSection = () => {
                 <div className="relative">
                   {/* Glow Effect Behind Logo */}
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-200/30 via-amber-200/40 to-orange-200/30 blur-3xl rounded-full transform scale-110"></div>
-                  
+
                   {/* Main Logo Container */}
                   <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-300">
                     {/* Inner Glow */}
                     <div className="absolute inset-2 bg-gradient-to-r from-yellow-100/20 via-amber-100/20 to-orange-100/20 rounded-2xl"></div>
-                    
+
                     {/* Logo Image */}
                     <div className="relative flex items-center justify-center">
-                      <img 
+                      <img
                         src={logo}
                         alt="Maya Tour and Travels Logo"
                         className="h-24 lg:h-32 xl:h-40 w-auto object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-300"
@@ -392,7 +392,7 @@ const HeroSection = () => {
                       />
                     </div>
                   </div>
-                  
+
                   {/* Floating Particles Effect */}
                   <div className="absolute -top-4 -right-4 w-3 h-3 bg-yellow-300 rounded-full animate-bounce delay-0"></div>
                   <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-amber-300 rounded-full animate-bounce delay-300"></div>
@@ -411,7 +411,7 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-700 ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
               <a
-                href="tel:+919368084778"
+                href="tel:+919897138727"
                 className="bg-gradient-to-r from-yellow-300 to-amber-400 text-amber-800 px-8 py-4 rounded-xl hover:from-yellow-400 hover:to-amber-500 transition-all transform hover:scale-105 font-semibold flex items-center justify-center shadow-lg group"
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -419,7 +419,7 @@ const HeroSection = () => {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="https://wa.me/919368084778?text=Hello%2C%20Maya%20Tours%20and%20Travels"
+                href="https://wa.me/919897138727?text=Hello%2C%20Maya%20Tours%20and%20Travels"
                 className="bg-emerald-500 text-white px-8 py-4 rounded-xl hover:bg-emerald-600 transition-all transform hover:scale-105 font-semibold flex items-center justify-center shadow-lg group"
                 target="_blank"
                 rel="noopener noreferrer"

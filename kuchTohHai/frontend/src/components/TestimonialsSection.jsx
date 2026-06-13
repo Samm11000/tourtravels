@@ -49,13 +49,13 @@ const TestimonialsSection = () => {
             {t('testimonialsSubtitle')}
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {testimonials.map(testimonial => (
             <div key={testimonial.id} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all transform hover:-translate-y-1">
               <div className="flex items-center mb-4">
-                <img 
-                  src={testimonial.image} 
+                <img
+                  src={testimonial.image}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
@@ -64,13 +64,13 @@ const TestimonialsSection = () => {
                   <p className="text-sm text-gray-600">{testimonial.location}</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center mb-3">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
                 ))}
               </div>
-              
+
               <div className="relative">
                 <Quote className="w-6 h-6 text-blue-200 absolute -top-2 -left-1" />
                 <p className="text-gray-700 text-sm leading-relaxed pl-4">
@@ -80,14 +80,14 @@ const TestimonialsSection = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="bg-gradient-to-r from-blue-700 to-blue-800 rounded-2xl p-12 text-center text-white">
           <h3 className="text-3xl font-bold mb-4">{t('joinHappyCustomers')}</h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             {t('experienceDifference')}
           </p>
-          <a 
-            href="tel:+919368084778" 
+          <a
+            href="tel:+919897138727"
             className="bg-white text-blue-800 px-8 py-4 rounded-xl hover:bg-blue-50 transition-all transform hover:scale-105 font-semibold inline-flex items-center shadow-lg group"
           >
             {t('bookNow')}

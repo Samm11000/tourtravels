@@ -35,7 +35,7 @@
 //             {t('contactSubtitle')}
 //           </p>
 //         </div>
-        
+
 //         <div className="grid lg:grid-cols-2 gap-12">
 //           {/* Contact Information */}
 //           <div className="space-y-8">
@@ -52,7 +52,7 @@
 //                     <p className="text-sm text-gray-500">{t('available24x7')}</p>
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="flex items-start">
 //                   <div className="bg-emerald-100 p-3 rounded-full mr-4">
 //                     <MessageCircle className="w-6 h-6 text-emerald-600" />
@@ -63,7 +63,7 @@
 //                     <p className="text-sm text-gray-500">{t('quickResponses')}</p>
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="flex items-start">
 //                   <div className="bg-purple-100 p-3 rounded-full mr-4">
 //                     <Mail className="w-6 h-6 text-purple-600" />
@@ -74,7 +74,7 @@
 //                     <p className="text-sm text-gray-500">{t('replyWithin2Hours')}</p>
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="flex items-start">
 //                   <div className="bg-red-100 p-3 rounded-full mr-4">
 //                     <MapPin className="w-6 h-6 text-red-600" />
@@ -87,7 +87,7 @@
 //                     </p>
 //                   </div>
 //                 </div>
-                
+
 //                 <div className="flex items-start">
 //                   <div className="bg-amber-100 p-3 rounded-full mr-4">
 //                     <Clock className="w-6 h-6 text-amber-600" />
@@ -100,20 +100,20 @@
 //                 </div>
 //               </div>
 //             </div>
-            
+
 //             <div className="bg-gradient-to-r from-blue-700 to-blue-800 rounded-2xl shadow-lg p-8 text-white">
 //               <h3 className="text-xl font-semibold mb-4">{t('quickContact')}</h3>
 //               <p className="mb-6 text-blue-100">{t('needImmediateAssistance')}</p>
 //               <div className="flex flex-col sm:flex-row gap-4">
 //                 <a 
-//                   href="tel:+919368084778" 
+//                   href="tel:+919897138727" 
 //                   className="bg-white text-blue-700 px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors flex items-center justify-center font-semibold"
 //                 >
 //                   <Phone className="w-5 h-5 mr-2" />
 //                   {t('callNow')}
 //                 </a>
 //                 <a 
-//                   href="https://wa.me/919368084778?text=Hello%20Maya%20Tours%20and%20Travel
+//                   href="https://wa.me/919897138727?text=Hello%20Maya%20Tours%20and%20Travel
 // " 
 //                   className="bg-emerald-600 text-white px-6 py-3 rounded-xl hover:bg-emerald-700 transition-colors flex items-center justify-center font-semibold"
 //                 >
@@ -125,7 +125,7 @@
 //           </div>
 
 //           <BookingForm/>
-          
+
 //           {/* Contact Form */}
 //           {/* <div className="bg-white rounded-2xl shadow-lg p-8">
 //             <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t('sendMessage')}</h3>
@@ -156,7 +156,7 @@
 //                   />
 //                 </div>
 //               </div>
-              
+
 //               <div>
 //                 <label className="block text-sm font-medium text-gray-700 mb-2">{t('emailAddress')}</label>
 //                 <input 
@@ -168,7 +168,7 @@
 //                   placeholder="your@email.com"
 //                 />
 //               </div>
-              
+
 //               <div>
 //                 <label className="block text-sm font-medium text-gray-700 mb-2">{t('serviceRequired')}</label>
 //                 <select 
@@ -185,7 +185,7 @@
 //                   <option value="corporate-travel">{t('corporateTravel')}</option>
 //                 </select>
 //               </div>
-              
+
 //               <div>
 //                 <label className="block text-sm font-medium text-gray-700 mb-2">{t('message')}</label>
 //                 <textarea 
@@ -197,7 +197,7 @@
 //                   placeholder={t('tellUsAboutRequirements')}
 //                 ></textarea>
 //               </div>
-              
+
 //               <button 
 //                 type="submit" 
 //                 className="w-full bg-gradient-to-r from-blue-700 to-blue-800 text-white py-4 rounded-xl hover:from-blue-800 hover:to-blue-900 transition-all font-semibold flex items-center justify-center group shadow-lg"
@@ -227,12 +227,12 @@ const MeetTheOwner = () => {
   return (
     <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl shadow-lg p-8 border-2 border-amber-200">
       <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Meet The Owner</h3>
-      
+
       <div className="flex flex-col items-center text-center space-y-6">
         {/* Owner Photo */}
         <div className="relative">
-          <img 
-            src="https://mayatourandtravels.com/images/gallery/maya-tours-and-travels-mathura-4.jpg" 
+          <img
+            src="https://mayatourandtravels.com/images/gallery/maya-tours-and-travels-mathura-4.jpg"
             alt="Mr. Anuj Agrawal"
             className="w-32 h-32 rounded-full object-cover border-4 border-amber-300 shadow-xl"
           />
@@ -240,48 +240,48 @@ const MeetTheOwner = () => {
             <Star className="w-4 h-4 fill-current" />
           </div>
         </div>
-        
+
         {/* Owner Details */}
         <div className="space-y-3">
           <h4 className="text-xl font-bold text-gray-900">Mr. Anuj Agrawal</h4>
           <p className="text-amber-700 font-semibold">Founder & CEO</p>
           <p className="text-gray-600 text-sm leading-relaxed max-w-sm">
-            "With over 15+ years of experience in travel industry, I personally ensure 
+            "With over 15+ years of experience in travel industry, I personally ensure
             every journey with Maya Tours is memorable and hassle-free. Your satisfaction is our priority."
           </p>
         </div>
-        
+
         {/* Contact Details */}
         <div className="w-full space-y-4 pt-4 border-t border-amber-200">
           <div className="flex items-center justify-center space-x-2 text-gray-700">
             <Phone className="w-4 h-4 text-amber-600" />
             <span className="text-sm font-medium">Direct Contact:</span>
           </div>
-          
+
           <div className="space-y-2">
-            <a 
-              href="tel:+919897011103" 
+            <a
+              href="tel:+919897011103"
               className="block bg-amber-100 text-amber-800 py-2 px-4 rounded-lg hover:bg-amber-200 transition-colors font-semibold text-sm"
             >
               📞 +91-9897011103
             </a>
-            <a 
-              href="tel:+919897138727" 
+            <a
+              href="tel:+919897138727"
               className="block bg-amber-100 text-amber-800 py-2 px-4 rounded-lg hover:bg-amber-200 transition-colors font-semibold text-sm"
             >
               📞 +91-9897138727
             </a>
-            <a 
-              href="mailto:anuj.agarwal7588@gmail.com" 
+            <a
+              href="mailto:anuj.agarwal7588@gmail.com"
               className="block bg-yellow-100 text-yellow-800 py-2 px-4 rounded-lg hover:bg-yellow-200 transition-colors font-semibold text-sm"
             >
               ✉️ anuj.agarwal7588@gmail.com
             </a>
           </div>
         </div>
-        
+
         {/* CTA Button */}
-        <a 
+        <a
           href="https://wa.me/919897011103?text=Hello%20Maya%20Tours%20and%20Travel%2C%20I%20want%20to%20speak%20with%20owner"
           target="_blank"
           rel="noopener noreferrer"
@@ -309,7 +309,7 @@ const ContactSection = () => {
             {t('contactSubtitle')}
           </p>
         </div>
-        
+
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
@@ -327,7 +327,7 @@ const ContactSection = () => {
                     <p className="text-sm text-gray-500">{t('available24x7')}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-emerald-100 p-3 rounded-full mr-4">
                     <MessageCircle className="w-6 h-6 text-emerald-600" />
@@ -338,7 +338,7 @@ const ContactSection = () => {
                     <p className="text-sm text-gray-500">{t('quickResponses')}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-yellow-100 p-3 rounded-full mr-4">
                     <Mail className="w-6 h-6 text-yellow-600" />
@@ -349,7 +349,7 @@ const ContactSection = () => {
                     <p className="text-sm text-gray-500">{t('replyWithin2Hours')}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-orange-100 p-3 rounded-full mr-4">
                     <MapPin className="w-6 h-6 text-orange-600" />
@@ -363,7 +363,7 @@ const ContactSection = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-amber-100 p-3 rounded-full mr-4">
                     <Clock className="w-6 h-6 text-amber-600" />
@@ -376,20 +376,20 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-amber-600 to-yellow-600 rounded-2xl shadow-lg p-8 text-white">
               <h3 className="text-xl font-semibold mb-4">{t('quickContact')}</h3>
               <p className="mb-6 text-amber-100">{t('needImmediateAssistance')}</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="tel:+919897011103" 
+                <a
+                  href="tel:+919897011103"
                   className="bg-white text-amber-700 px-6 py-3 rounded-xl hover:bg-amber-50 transition-colors flex items-center justify-center font-semibold"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   {t('callNow')}
                 </a>
-                <a 
-                  href="https://wa.me/919897011103?text=Hello%20Maya%20Tours%20and%20Travel" 
+                <a
+                  href="https://wa.me/919897011103?text=Hello%20Maya%20Tours%20and%20Travel"
                   className="bg-emerald-600 text-white px-6 py-3 rounded-xl hover:bg-emerald-700 transition-colors flex items-center justify-center font-semibold"
                   target="_blank"
                   rel="noopener noreferrer"

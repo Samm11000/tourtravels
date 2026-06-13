@@ -38,7 +38,7 @@ const BookingFormCar = ({ id, name }) => {
         serviceType: formData.serviceType,
       });
 
-const message = `Hello Maya Tours and Travels,%0A
+      const message = `Hello Maya Tours and Travels,%0A
 This is ${formData.name}.%0A
 I would like to enquire about the vehicle with ID: ${id} (${name}).%0A
 Service Type: ${formData.serviceType}%0A
@@ -47,7 +47,7 @@ Route: From ${formData.from} to ${formData.to}.%0A
 Kindly confirm availability and provide the booking details.%0A
 Thank you.`;
 
-      const whatsappLink = `https://wa.me/9368084778?text=${message}`;
+      const whatsappLink = `https://wa.me/9897138727?text=${message}`;
 
       window.location.href = whatsappLink;
     } catch (err) {
@@ -213,10 +213,10 @@ Thank you.`;
           <p className="text-sm text-gray-500">
             {t("needHelp")}{" "}
             <a
-              href="tel:+919368084778"
+              href="tel:+919897138727"
               className="text-blue-700 font-semibold hover:underline"
             >
-              +91 9368084778
+              +91 9897138727
             </a>
           </p>
         </div>

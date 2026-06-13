@@ -413,14 +413,14 @@ const PackageDetail = ({ packageId, onBack }) => {
                   </p>
                   <div className="flex justify-center gap-4 pt-2">
                     <a
-                      href="tel:+919368084778"
+                      href="tel:+919897138727"
                       className="text-blue-700 hover:text-blue-800 flex items-center text-sm"
                     >
                       <Phone className="w-4 h-4 mr-1" />
                       {t("callNow")}
                     </a>
                     <a
-                      href="https://wa.me/919368084778?text=Hello%20Maya%20Tours%20and%20Travel"
+                      href="https://wa.me/919897138727?text=Hello%20Maya%20Tours%20and%20Travel"
                       className="text-emerald-600 hover:text-emerald-700 flex items-center text-sm"
                     >
                       <MessageCircle className="w-4 h-4 mr-1" />
