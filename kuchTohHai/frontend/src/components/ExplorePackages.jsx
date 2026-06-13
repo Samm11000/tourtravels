@@ -48,7 +48,7 @@ const ExplorePackages = ({ onBack, onPackageClick }) => {
       duration: "8 Days / 7 Nights",
       price: "₹35,000",
       originalPrice: "₹42,000",
-      image: "https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://images.pexels.com/photos/29481959/pexels-photo-29481959.jpeg",
       highlights: ["Udaipur", "Jodhpur", "Jaisalmer", "Desert Safari"],
       rating: 4.9,
       category: "heritage",
@@ -96,7 +96,7 @@ const ExplorePackages = ({ onBack, onPackageClick }) => {
       duration: "5 Days / 4 Nights",
       price: "₹35,000",
       originalPrice: "₹42,000",
-      image: "https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://images.pexels.com/photos/37949154/pexels-photo-37949154.jpeg",
       highlights: ["Port Blair", "Havelock", "Neil Island", "Scuba Diving"],
       rating: 4.9,
       category: "beach",
@@ -127,7 +127,7 @@ const ExplorePackages = ({ onBack, onPackageClick }) => {
   const filteredPackages = allPackages.filter(pkg => {
     const matchesCategory = selectedCategory === 'all' || pkg.category === selectedCategory;
     const matchesSearch = pkg.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         pkg.highlights.some(highlight => highlight.toLowerCase().includes(searchTerm.toLowerCase()));
+      pkg.highlights.some(highlight => highlight.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
@@ -171,11 +171,10 @@ const ExplorePackages = ({ onBack, onPackageClick }) => {
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`px-4 py-2 rounded-full font-medium transition-all ${
-                      selectedCategory === category.id
-                        ? 'bg-blue-700 text-white'
-                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                    }`}
+                    className={`px-4 py-2 rounded-full font-medium transition-all ${selectedCategory === category.id
+                      ? 'bg-blue-700 text-white'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      }`}
                   >
                     {category.name}
                   </button>
@@ -190,8 +189,8 @@ const ExplorePackages = ({ onBack, onPackageClick }) => {
           {filteredPackages.map(pkg => (
             <div key={pkg.id} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 overflow-hidden group cursor-pointer">
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={pkg.image} 
+                <img
+                  src={pkg.image}
                   alt={pkg.title}
                   className="w-full h-full object-cover transition-transform group-hover:scale-110"
                 />
@@ -206,16 +205,16 @@ const ExplorePackages = ({ onBack, onPackageClick }) => {
                   <span className="text-sm font-medium">{pkg.rating}</span>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{pkg.title}</h3>
                 <p className="text-gray-600 mb-3 flex items-center">
                   <Clock className="w-4 h-4 mr-2" />
                   {pkg.duration}
                 </p>
-                
+
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">{pkg.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {pkg.highlights.map((highlight, idx) => (
                     <span key={idx} className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium flex items-center">
@@ -224,8 +223,8 @@ const ExplorePackages = ({ onBack, onPackageClick }) => {
                     </span>
                   ))}
                 </div>
-                
-                <button 
+
+                <button
                   onClick={() => onPackageClick(pkg.id)}
                   className="w-full bg-blue-700 text-white py-3 rounded-xl hover:bg-blue-800 transition-colors font-semibold"
                 >
